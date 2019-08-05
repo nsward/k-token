@@ -61,7 +61,7 @@ types
 storage
     balances[CALLER_ID] |-> SrcBal => SrcBal - amt
     balances[dst]       |-> DstBal => DstBal + amt
-    owner_stopped       |-> #WordPackAddrUInt8(Owner, Stopped)
+    owner_stopped       |-> #WordPack20x1(Owner, Stopped)
 iff in range uint256
     SrcBal - amt
     DstBal + amt
@@ -86,7 +86,7 @@ types
     Owner   : address
     Stopped : bool
 storage
-    owner_stopped |-> #WordPackAddrUInt8(Owner, Stopped)
+    owner_stopped |-> #WordPack20x1(Owner, Stopped)
 iff
     VCallValue == 0
 
@@ -104,7 +104,7 @@ types
     Owner   : address
     Stopped : bool
 storage
-    stopped |-> #WordPackAddrUInt8(Owner, Stopped) => #WordPackAddrUInt8(Owner, 1)
+    stopped |-> #WordPack20x1(Owner, Stopped) => #WordPack20x1(Owner, 1)
 iff
     Caller == Owner
     VCallValue == 0
