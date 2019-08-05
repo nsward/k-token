@@ -1,0 +1,2 @@
+A work-in-progress formal specification of the [DSToken](https://github.com/dapphub/ds-token) contract.
+This is not really breaking any new ground, as the ERC20 functions of the contract have already been formally verified by [Runtime Verification](https://github.com/runtimeverification/verified-smart-contracts/tree/master/erc20/ds-token) and are included in the [specification](https://github.com/dapphub/k-dss) of multi-collateral dai.
