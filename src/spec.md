@@ -2,6 +2,8 @@
 
 ### View functions
 
+pass\_rough pass
+fail\_rough pass
 ```act
 behaviour totalSupply of DSToken
 interface totalSupply()
@@ -16,6 +18,8 @@ iff
 returns Supply
 ```
 
+pass\_rough pass
+fail\_rough pass
 ```act
 behaviour balanceOf of DSToken
 interface balanceOf(address who)
@@ -30,6 +34,8 @@ iff
 returns Bal
 ```
 
+pass\_rough pass
+fail\_rough pass
 ```act
 behaviour allowance of DSToken
 interface allowance(address src, address for)
@@ -46,9 +52,11 @@ returns Amt
 
 ### State transition functions
 
-// TODO: prove the case where dst == caller or find a way to make this
-// cover that case
-// Note that the fail_rough spec fails if the check is included as an iff
+TODO: prove the case where dst == caller or find a way to make this
+cover that case. Note that the fail\_rough spec fails if the check
+is included as an iff  
+pass\_rough pass
+fail\_rough pass
 ```act
 behaviour transfer of DSToken
 interface transfer(address dst, uint amt)
@@ -78,6 +86,8 @@ returns 1
 
 ### View functions
 
+pass\_rough pass
+fail\_rough pass
 ```act
 behaviour stopped of DSToken
 interface stopped()
@@ -95,7 +105,9 @@ returns Stopped
 
 ### State transition functions
 
-TODO: need to either modify the auth contract or verify the call to canCall
+TODO: need to either modify the auth contract or verify the call to canCall  
+pass\_rough ?
+fail\_rough ?
 ```act
 behaviour stop of DSToken
 interface stop()
