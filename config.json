@@ -12,5 +12,5 @@
       "src": "src/token.sol"
     }
   },
-  "dapp_root": "gem"
+  "dapp_root": "token"
 }
