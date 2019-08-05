@@ -82,6 +82,29 @@ if
 returns 1
 ```
 
+pass\_rough pass
+fail\_rough pass
+```act
+behaviour transfer_self of DSToken
+interface transfer(address dst, uint amt)
+
+types
+    Bal     : uint256
+    Owner   : address
+    Stopped : bool
+storage
+    balances[dst] |-> Bal => Bal
+    owner_stopped |-> #WordPack20x1(Owner, Stopped)
+iff
+    amt <= Bal
+    Stopped == 0
+    VCallValue == 0
+if
+    dst == CALLER_ID
+
+returns 1
+```
+
 # Stop functions
 
 ### View functions
